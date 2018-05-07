@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="uav" default=""/>
+    <node pkg="hector_quad_simple_ctrl" type="hector_quad_simple_ctrl_pose_node" name="hector_quad_simple_ctrl_pose_node" output="screen">
+        <remap from="/pose_cmd" to="$(arg uav)/pose_cmd"/>
+    </node>
+</launch>
